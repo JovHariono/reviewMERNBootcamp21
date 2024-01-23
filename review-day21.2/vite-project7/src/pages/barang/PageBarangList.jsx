@@ -19,7 +19,7 @@ const PageBarangList = () => {
   const http = useHTTP();
   const jwt = useJWT();
   const message = useMessage();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const [daftarBarang, setDaftarBarang] = useState([]);
   const [daftarBarangPagination, setDaftarBarangPagination] = useState({});
@@ -130,7 +130,9 @@ const PageBarangList = () => {
                   {daftarBarang.map((value) => {
                     return (
                       <tr key={value._id}>
-                        <th>{value._id}</th>
+                        <th>
+                          <Link to={`/detail/${value._id}`} className={"text-decoraation-none"}>{value._id}</Link>
+                        </th>
                         <th>{value.nama}</th>
                         <th>{value.created}</th>
                       </tr>

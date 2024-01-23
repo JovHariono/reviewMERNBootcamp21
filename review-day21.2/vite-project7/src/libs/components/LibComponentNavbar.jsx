@@ -20,8 +20,8 @@ const LibComponentNavbar = () => {
         {application.isAuthenticated && (
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#">Barang</Nav.Link>
-              <Nav.Link href="#terima">Terima</Nav.Link>
+              <Nav.Link href="#/">Barang</Nav.Link>
+              <Nav.Link href="#/terima">Terima</Nav.Link>
               <Nav.Link onClick={signOut}>Log out</Nav.Link>
             </Nav>
           </Navbar.Collapse>

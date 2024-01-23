@@ -23,7 +23,7 @@ const BarangControllerCreate = async (req, res) => {
   try {
     const result = await Barang.create(req.cleanedData);
 
-    res.status(200).json(result);
+    res.status(201).json(result);
   } catch (error) {
     return LibHTTPResponseException(res, error);
   }
